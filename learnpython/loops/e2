@@ -1,0 +1,26 @@
+instruction = ""
+started = False
+
+while True:
+    instruction = input(">").lower()
+    if  instruction == "help":
+        print('''start - to start the car
+stop - to stop the car
+quit - to exit
+        ''')
+    elif instruction == "start":
+        if started:
+            print("Are you nuts! The car is already started.")
+        else:
+            started = True
+            print("Car started...Ready to go!")
+    elif instruction == "stop":
+        if not started:
+            print("Wake up! The car is already stopped.")
+        else:
+            started = False
+            print("Car stopped.")
+    elif instruction == "quit":
+        break
+    else:
+        print("I don't understand that...")
