@@ -1,0 +1,8 @@
+#example of formatted string
+
+name = "Gold"
+category = "movie"
+long_msg = name + ' [' + category + '] was a flop!'
+short_msg = f'{name} [{category}] was a flop!'
+print(long_msg)
+print(short_msg)
