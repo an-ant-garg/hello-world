@@ -1,0 +1,12 @@
+name = input("What is your name: ")
+age = input("What is your age: ")
+gender = input("What is your gender (M/F/O): ")
+
+if int(age) < 0 or gender.upper() != "M" and gender.upper() != "F" and gender.upper() != "O":
+    print("Wrong input!")
+else:
+    if int(age) <= 10 or gender.upper() == "O":
+        ticket_price = 10
+    else:
+        ticket_price = 20
+    print(f"Hi {name}. Your ticket shall be ${ticket_price}. Have a nice journey!")
