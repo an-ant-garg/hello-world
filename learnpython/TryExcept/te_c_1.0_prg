@@ -1,0 +1,9 @@
+# this code calls the function to convert a number into a string containing its digits in words and prints output
+from utils import zero_num_text
+
+
+try:
+    input = input("Input number: ")
+    print(zero_num_text(input))
+except ValueError:
+    print("invalid input (input not a number)")
