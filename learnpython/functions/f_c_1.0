@@ -1,0 +1,8 @@
+# convert emojis written in special characters into picture emojis
+def emoji(phrase):
+    phrase_split = phrase.split(" ")
+    emoji_dict = {":)": "😊", ":D": "😁", ":P": "😛", ";)": "😉", ":(": "😞", ":'(": "😢", ":/": "😕", ":x": "😡"}
+    new_phrase = ""
+    for word in phrase_split:
+        new_phrase += emoji_dict.get(word, word) + " "
+    return new_phrase
