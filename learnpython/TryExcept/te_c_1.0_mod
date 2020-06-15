@@ -1,0 +1,25 @@
+# converts a number into a string containing the digits in words
+# this is a code containing a function that can be called in different codes
+def zero_num_text(input_val):
+
+
+    def num_text(number):
+        numbers = list(number)
+        num_list = {"0": "Zero", "1": "One", "2": "Two", "3": "Three", "4": "Four", "5": "Five", "6": "Six", "7": "Seven", "8": "Eight", "9": "Nine"}
+        text: str = ""
+        for num in numbers:
+            text += num_list.get(num, num) + " "
+        return text
+
+
+    num_val = int(input_val)
+    if len(input_val) > len(str(num_val)):
+        diff = len(input_val) - len(str(num_val))
+        zero_string = ""
+        for zero in range(diff):  # for integers, range is used for running the loop through
+            zero_string += "Zero "
+        text_zero = str(num_val)
+        return zero_string + num_text(text_zero)
+    else:
+        text = str(num_val)
+        return num_text(text)
