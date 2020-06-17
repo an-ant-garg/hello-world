@@ -17,17 +17,17 @@ for row in range(3, sheet_max_row + 1):
 sheet['x2'] = "Average Applicant"
 
 chart = BarChart()
-# chart.type = "col"
-# chart.style = 10
-# chart.title = "CRS Score Applicant Count"
-# chart.y_axis.title = '#Average Applicant Count '
-# chart.x_axis.title = 'CRS Score Buckets'
+chart.type = "col"
+chart.style = 10
+chart.title = "CRS Score Applicant Count"
+chart.y_axis.title = '#Average Applicant Count '
+chart.x_axis.title = 'CRS Score Buckets'
 
 data = Reference(sheet, min_row=3, max_row=sheet.max_row, min_col=sheet.max_column, max_col=sheet.max_column)
-# categories = Reference(sheet, min_col=1, max_col=1, min_row=3, max_row=sheet.max_row)
+categories = Reference(sheet, min_col=1, max_col=1, min_row=3, max_row=sheet.max_row)
 chart.add_data(data)
-# chart.set_categories(categories)
+chart.set_categories(categories)
 sheet.add_chart(chart, 'b21')
-# chart.shape = 4
+chart.shape = 4
 
 wb.save('Python Practice File 2.xlsx')
